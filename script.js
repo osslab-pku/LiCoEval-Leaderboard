@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
             scales: {
                 y: {
                     beginAtZero: true,
-                    max: 1.1,
+                    max: 1.0,
                     ticks: {
                         stepSize: 0.1,
                         font: {
