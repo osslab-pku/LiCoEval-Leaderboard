@@ -101,3 +101,32 @@ main {
     max-width: 1000px;
     margin: 20px auto;
 }
+
+.leaderboard-table {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    overflow-x: auto; /* Add horizontal scroll for small screens */
+}
+
+.leaderboard-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.leaderboard-table th, .leaderboard-table td {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: left;
+    font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+.leaderboard-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.leaderboard-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
