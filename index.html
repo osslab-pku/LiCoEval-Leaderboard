@@ -5,11 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LiCoEval Leaderboard</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./icons/osslab.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
 <main>
-    <h1>LiCoEval Leaderboard</h1>
+    <div class="title-introduction">
+        <h1>LiCoEval Leaderboard</h1>
+        <p>A benchmark to evaluate the ability of LLMs to provide accurate license information for their generated
+            code.</p>
+        <section class="benchmark-link">
+            <div class="benchmark-link-item">
+                <a href="https://github.com/osslab-pku/LiCoEval">
+                    <img src="icons/github.svg" alt="GitHub">
+                </a>
+            </div>
+            <div class="benchmark-link-item">
+                <a href="https://github.com/osslab-pku/LiCoEval">
+                    <img src="icons/huggingface.svg" alt="Hugging Face">
+                </a>
+            </div>
+            <div class="benchmark-link-item">
+                <a href="https://arxiv.org/abs/2408.02487">
+                    <img src="icons/arxiv.svg" alt="ArXiv">
+                </a>
+            </div>
+        </section>
+    </div>
 </main>
+<div class="graph">
+    <canvas id="llmChart"></canvas>
+</div>
 <script src="script.js"></script>
 </body>
 </html>
