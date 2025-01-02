@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // First chart (LiCoEval Score)
-    const data = {
+    /* First chart (LiCoEval Score) */
+    const data1 = {
         labels: [
             "GPT-3.5-Turbo", "GPT-4-Turbo", "GPT4o", "Gemini-1.5-Pro", "Claude-3.5-Sonnet",
             "Qwen2-7B-Instruct", "GLM-4-9B-Chat", "Llama-3-8B-Instruct",
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 label: 'LiCoEval Score',
                 data: [0.373, 0.376, 0.385, 0.317, 0.571, 0.985, 1.0, 0.714, 0.142, 0.781, 0.780, 0.360, 0.809, 0.153],
                 backgroundColor: (context) => {
-                    const label = data.labels[context.dataIndex];
+                    const label = data1.labels[context.dataIndex];
                     if ([
                         "GPT-3.5-Turbo", "GPT-4-Turbo", "GPT4o", "Gemini-1.5-Pro",
                         "Claude-3.5-Sonnet", "Qwen2-7B-Instruct", "GLM-4-9B-Chat", "Llama-3-8B-Instruct"
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 },
                 borderColor: (context) => {
-                    const label = data.labels[context.dataIndex];
+                    const label = data1.labels[context.dataIndex];
                     if ([
                         "GPT-3.5-Turbo", "GPT-4-Turbo", "GPT4o", "Gemini-1.5-Pro",
                         "Claude-3.5-Sonnet", "Qwen2-7B-Instruct", "GLM-4-9B-Chat", "Llama-3-8B-Instruct"
@@ -38,10 +38,10 @@ document.addEventListener('DOMContentLoaded', function() {
         ]
     };
 
-    const ctx = document.getElementById('CoLiChart').getContext('2d');
-    const myChart = new Chart(ctx, {
+    const ctx1 = document.getElementById('LiCoChart').getContext('2d');
+    const myChart1 = new Chart(ctx1, {
         type: 'bar',
-        data: data,
+        data: data1,
         options: {
             responsive: true,
             maintainAspectRatio: false,
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Second chart (HumanEval)
+    /* Second chart (HumanEval) */
     const data2 = {
         labels: [
             "GPT-3.5-Turbo", "GPT-4-Turbo", "GPT4o", "Gemini-1.5-Pro", "Claude-3.5-Sonnet",
