@@ -1,4 +1,67 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const titleIntroduction = document.querySelector('.title-introduction');
+
+    /* Add the 'visible' class to trigger the animation */
+    titleIntroduction.classList.add('visible');
+
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    function activateTab(tabId) {
+        tabContents.forEach(content => {
+            content.classList.remove('active');
+        });
+        tabButtons.forEach(button => {
+            button.classList.remove('active');
+        });
+
+        const selectedTab = document.getElementById(tabId);
+        if (selectedTab) {
+            selectedTab.classList.add('active');
+            document.querySelector(`.tab-button[data-tab="${tabId}"]`).classList.add('active');
+        }
+    }
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const tabId = this.getAttribute('data-tab');
+            activateTab(tabId);
+        });
+    });
+
+    const graphs = document.querySelectorAll('.graph');
+    const tables = document.querySelectorAll('.leaderboard-table');
+    const notes = document.querySelector('.notes');
+    const recommendation = document.querySelector('.recommendation');
+
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5 // Trigger when top is in middle of viewport
+    };
+
+    function handleIntersection(entries, observer) {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }
+
+    const observer = new IntersectionObserver(handleIntersection, observerOptions);
+
+    graphs.forEach(graph => {
+        observer.observe(graph);
+    });
+    tables.forEach(table => {
+        observer.observe(table);
+    });
+    observer.observe(notes);
+    observer.observe(recommendation);
+
+
     /* First chart (LiCoEval Score) */
     const data1 = {
         labels: [

@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,112 +9,252 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 </head>
 <body>
-<main>
-    <div class="title-introduction">
-        <h1>LiCoEval Leaderboard</h1>
-        <p>A benchmark to evaluate the ability of LLMs to provide accurate license information for their generated
-            code.</p>
-        <section class="benchmark-link">
-            <div class="benchmark-link-item">
-                <a href="https://github.com/osslab-pku/LiCoEval">
-                    <img src="icons/github.svg" alt="GitHub">
-                </a>
-            </div>
-            <div class="benchmark-link-item">
-                <a href="https://github.com/osslab-pku/LiCoEval">
-                    <img src="icons/huggingface.svg" alt="Hugging Face">
-                </a>
-            </div>
-            <div class="benchmark-link-item">
-                <a href="https://arxiv.org/abs/2408.02487">
-                    <img src="icons/arxiv.svg" alt="ArXiv">
-                </a>
-            </div>
-        </section>
-    </div>
-</main>
-<div class="graph">
-    <canvas id="LiCoChart"></canvas>
-</div>
-<div class="graph">
-    <canvas id="HumanChart"></canvas>
+<div class="title-introduction">
+    <h1>LiCoEval Leaderboard</h1>
+    <p>A benchmark to evaluate the ability of LLMs to provide accurate license information for their generated
+        code.</p>
+    <section class="benchmark-link">
+        <div class="benchmark-link-item">
+            <a href="https://github.com/osslab-pku/LiCoEval">
+                <img src="icons/github.svg" alt="GitHub">
+            </a>
+        </div>
+        <div class="benchmark-link-item">
+            <a href="https://github.com/osslab-pku/LiCoEval">
+                <img src="icons/huggingface.svg" alt="Hugging Face">
+            </a>
+        </div>
+        <div class="benchmark-link-item">
+            <a href="https://arxiv.org/abs/2408.02487">
+                <img src="icons/arxiv.svg" alt="ArXiv">
+            </a>
+        </div>
+    </section>
 </div>
 
-<div class="leaderboard-table">
+<div class="button-container">
+    <button class="tab-button active" data-tab="LiCoEval">LiCoEval</button>
+    <button class="tab-button" data-tab="HumanEval">HumanEval</button>
+</div>
+
+<div class="content-container">
+    <div class="tab-content active" id="LiCoEval">
+        <div class="graph">
+            <canvas id="LiCoChart"></canvas>
+        </div>
+
+        <div class="leaderboard-table">
+            <h2>LiCoEval Scores</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Model</th>
+                    <th>LiCoEval Score</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td colspan="2" style="font-weight: bold;">General LLM</td>
+                </tr>
+                <tr>
+                    <td>GPT-3.5-Turbo</td>
+                    <td>0.373</td>
+                </tr>
+                <tr>
+                    <td>GPT-4-Turbo</td>
+                    <td>0.376</td>
+                </tr>
+                <tr>
+                    <td>GPT4o</td>
+                    <td>0.385</td>
+                </tr>
+                <tr>
+                    <td>Gemini-1.5-Pro</td>
+                    <td>0.317</td>
+                </tr>
+                <tr>
+                    <td>Claude-3.5-Sonnet</td>
+                    <td>0.571</td>
+                </tr>
+                <tr>
+                    <td>Qwen2-7B-Instruct</td>
+                    <td>0.985</td>
+                </tr>
+                <tr>
+                    <td>GLM-4-9B-Chat</td>
+                    <td>1.0</td>
+                </tr>
+                <tr>
+                    <td>Llama-3-8B-Instruct</td>
+                    <td>0.714</td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="font-weight: bold;">Code LLM</td>
+                </tr>
+                <tr>
+                    <td>DeepSeek-Coder-V2</td>
+                    <td>0.142</td>
+                </tr>
+                <tr>
+                    <td>CodeQwen1.5-7B-Chat</td>
+                    <td>0.781</td>
+                </tr>
+                <tr>
+                    <td>StarCoder2-15B-Instruct</td>
+                    <td>0.780</td>
+                </tr>
+                <tr>
+                    <td>Codestral-22B-v0.1</td>
+                    <td>0.360</td>
+                </tr>
+                <tr>
+                    <td>CodeGemma-7B-IT</td>
+                    <td>0.809</td>
+                </tr>
+                <tr>
+                    <td>WizardCoder-Python-13B</td>
+                    <td>0.153</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="tab-content" id="HumanEval">
+        <div class="graph">
+            <canvas id="HumanChart"></canvas>
+        </div>
+
+        <div class="leaderboard-table">
+            <h2>HumanEval Scores</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Model</th>
+                    <th>HumanEval</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td style="font-weight: bold;">General LLM</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>GPT-3.5-Turbo</td>
+                    <td>72.6</td>
+                </tr>
+                <tr>
+                    <td>GPT-4-Turbo</td>
+                    <td>85.4</td>
+                </tr>
+                <tr>
+                    <td>GPT4o</td>
+                    <td>90.2</td>
+                </tr>
+                <tr>
+                    <td>Gemini-1.5-Pro</td>
+                    <td>71.9</td>
+                </tr>
+                <tr>
+                    <td>Claude-3.5-Sonnet</td>
+                    <td>92.0</td>
+                </tr>
+                <tr>
+                    <td>Qwen2-7B-Instruct</td>
+                    <td>79.9</td>
+                </tr>
+                <tr>
+                    <td>GLM-4-9B-Chat</td>
+                    <td>71.8</td>
+                </tr>
+                <tr>
+                    <td>Llama-3-8B-Instruct</td>
+                    <td>62.2</td>
+                </tr>
+                <tr>
+                    <td style="font-weight: bold;">Code LLM</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>DeepSeek-Coder-V2</td>
+                    <td>90.2</td>
+                </tr>
+                <tr>
+                    <td>CodeQwen1.5-7B-Chat</td>
+                    <td>83.5</td>
+                </tr>
+                <tr>
+                    <td>StarCoder2-15B-Instruct</td>
+                    <td>72.6</td>
+                </tr>
+                <tr>
+                    <td>Codestral-22B-v0.1</td>
+                    <td>61.5</td>
+                </tr>
+                <tr>
+                    <td>CodeGemma-7B-IT</td>
+                    <td>56.1</td>
+                </tr>
+                <tr>
+                    <td>WizardCoder-Python-13B</td>
+                    <td>64.0</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div class="notes">
+    <h2>Notes</h2>
+    <p>1. We design a framework for evaluating the license compliance capabilities of LLMs in code generation and
+        provide the first benchmark for evaluating this capability. In addition, we evaluate the license
+        compliance capabilities of 14 popular LLMs, providing insight into improving the LLM training process
+        and regulating LLM usage.</p>
+    <p>2. The data above comes from <a href="https://arxiv.org/pdf/2408.02487">the paper</a>.</p>
+    <p>3. Want to use this benchmark? Please visit <a href="https://github.com/osslab-pku/LiCoEval">GitHub
+        repository</a> for more!</p>
+</div>
+
+<div class="leaderboard-table recommendation">
+    <h2>Recommendations</h2>
+    <p>It is recommended to comprehensively understand LLM coding ability through a diverse set of benchmarks and
+        leaderboards, such as:</p>
     <table>
-        <thead>
-        <tr>
-            <th>Model</th>
-            <th>LiCoEval Score</th>
-        </tr>
-        </thead>
         <tbody>
         <tr>
-            <td colspan="2" style="font-weight: bold;">General LLM</td>
+            <td>
+                <p><a href="https://fudanselab-classeval.github.io/leaderboard.html">ClassEval Leaderboard</a></p>
+            </td>
         </tr>
         <tr>
-            <td>GPT-3.5-Turbo</td>
-            <td>0.373</td>
+            <td>
+                <p><a href="https://crux-eval.github.io/leaderboard.html">CRUXEval Leaderboard</a></p>
+            </td>
         </tr>
         <tr>
-            <td>GPT-4-Turbo</td>
-            <td>0.376</td>
+            <td>
+                <p><a href="https://evalplus.github.io/leaderboard.html">EvalPlus Leaderboard</a></p>
+            </td>
         </tr>
         <tr>
-            <td>GPT4o</td>
-            <td>0.385</td>
+            <td>
+                <p><a href="https://huggingface.co/spaces/lmarena-ai/chatbot-arena-leaderboard">Chatbot Arena Leaderboard</a></p>
+            </td>
         </tr>
         <tr>
-            <td>Gemini-1.5-Pro</td>
-            <td>0.317</td>
-        </tr>
-        <tr>
-            <td>Claude-3.5-Sonnet</td>
-            <td>0.571</td>
-        </tr>
-        <tr>
-            <td>Qwen2-7B-Instruct</td>
-            <td>0.985</td>
-        </tr>
-        <tr>
-            <td>GLM-4-9B-Chat</td>
-            <td>1.0</td>
-        </tr>
-        <tr>
-            <td>Llama-3-8B-Instruct</td>
-            <td>0.714</td>
-        </tr>
-        <tr>
-            <td colspan="2" style="font-weight: bold;">Code LLM</td>
-        </tr>
-        <tr>
-            <td>DeepSeek-Coder-V2</td>
-            <td>0.142</td>
-        </tr>
-        <tr>
-            <td>CodeQwen1.5-7B-Chat</td>
-            <td>0.781</td>
-        </tr>
-        <tr>
-            <td>StarCoder2-15B-Instruct</td>
-            <td>0.780</td>
-        </tr>
-        <tr>
-            <td>Codestral-22B-v0.1</td>
-            <td>0.360</td>
-        </tr>
-        <tr>
-            <td>CodeGemma-7B-IT</td>
-            <td>0.809</td>
-        </tr>
-        <tr>
-            <td>WizardCoder-Python-13B</td>
-            <td>0.153</td>
+            <td>
+                <p><a href="https://leaderboard.tabbyml.com/">TabbyML Leaderboard</a></p>
+            </td>
         </tr>
         </tbody>
     </table>
 </div>
 
+<footer>
+    <p>OSSlab-PKU ❤️ Open Source</p>
+    <p>OSSlab-PKU ❤️ LLM</p>
+</footer>
 <script src="script.js"></script>
 </body>
 </html>

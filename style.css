@@ -31,38 +31,33 @@
     url("./fonts/JetBrains-Mono/JetBrainsMono-Regular.svg") format("svg");
 }
 
-html, body {
+body {
     margin: 0;
     padding: 0;
     height: 100%;
-}
-
-main {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
-    text-align: center;
-    box-sizing: border-box;
 }
 
 .title-introduction {
     margin: 0 20px;
     padding: 0;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    min-height: 100vh;
-}
-
-.title-introduction {
     align-items: center;
     justify-content: center;
-    margin: auto 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    text-align: center;
+    box-sizing: border-box;
+    transform: translateY(100vh);
+    opacity: 0;
+    transition: transform 1.5s ease, opacity 1.5s ease;
+}
+
+.title-introduction.visible {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .title-introduction h1 {
@@ -79,6 +74,7 @@ main {
 }
 
 .benchmark-link {
+    margin-top: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,18 +91,80 @@ main {
     transform: scale(1.25);
 }
 
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.tab-button {
+    background-color: #f2f2f2;
+    border: 1px solid #ddd;
+    padding: 15px 30px;
+    cursor: pointer;
+    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 2.2em;
+    letter-spacing: 0.05em;
+    transition: background-color 0.3s ease;
+}
+
+.tab-button.active {
+    background-color: #ddd;
+}
+
+.tab-button:hover {
+    background-color: #e0e0e0;
+}
+
+.content-container {
+    width: 100%;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
 .graph {
     width: 90%;
     height: 800px;
     max-width: 1000px;
     margin: 20px auto;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.graph.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .leaderboard-table {
     width: 90%;
     max-width: 1000px;
     margin: 20px auto;
-    overflow-x: auto; /* Add horizontal scroll for small screens */
+    overflow-x: auto;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.leaderboard-table h2 {
+    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 2em;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+.leaderboard-table.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .leaderboard-table table {
@@ -129,4 +187,75 @@ main {
 
 .leaderboard-table tr:nth-child(even) {
     background-color: #f9f9f9;
+}
+
+.leaderboard-table th:first-child,
+.leaderboard-table td:first-child {
+    width: 500px;
+}
+
+.notes {
+    margin-top: 40px;
+    width: 80%;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+.notes.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.notes h2 {
+    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 2.2em;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+.notes p {
+    font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 1.6em;
+    text-align: left;
+    margin: 20px 0;
+}
+
+.leaderboard-table.recommendation table td p{
+    font-size: 1.2em;
+}
+
+.leaderboard-table.recommendation table td {
+    border: none;
+    text-align: left;
+    padding: 10px;
+}
+
+.leaderboard-table.recommendation h2 {
+    font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 2.2em;
+    letter-spacing: 0.05em;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.leaderboard-table.recommendation p {
+    font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 1.6em;
+    text-align: left;
+    margin: 20px 0;
+}
+
+footer {
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: 1.6em;
 }
