@@ -50,6 +50,7 @@ body {
     height: 100vh;
     text-align: center;
     box-sizing: border-box;
+    width: 70%;
     transform: translateY(100vh);
     opacity: 0;
     transition: transform 1.5s ease, opacity 1.5s ease;
@@ -196,7 +197,7 @@ body {
 
 .notes {
     margin-top: 40px;
-    width: 80%;
+    width: 70%;
     opacity: 0;
     transform: translateY(50px);
     transition: transform 0.8s ease, opacity 0.8s ease;
