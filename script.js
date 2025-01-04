@@ -61,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
     observer.observe(notes);
     observer.observe(recommendation);
 
-
     /* First chart (LiCoEval Score) */
     const data1 = {
         labels: [

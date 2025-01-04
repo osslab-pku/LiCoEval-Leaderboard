@@ -44,7 +44,6 @@
         </div>
 
         <div class="leaderboard-table">
-            <h2>LiCoEval Scores</h2>
             <table>
                 <thead>
                 <tr>
@@ -126,7 +125,6 @@
         </div>
 
         <div class="leaderboard-table">
-            <h2>HumanEval Scores</h2>
             <table>
                 <thead>
                 <tr>
@@ -136,8 +134,7 @@
                 </thead>
                 <tbody>
                 <tr>
-                    <td style="font-weight: bold;">General LLM</td>
-                    <td></td>
+                    <td colspan="2" style="font-weight: bold;">General LLM</td>
                 </tr>
                 <tr>
                     <td>GPT-3.5-Turbo</td>
@@ -172,8 +169,7 @@
                     <td>62.2</td>
                 </tr>
                 <tr>
-                    <td style="font-weight: bold;">Code LLM</td>
-                    <td></td>
+                    <td colspan="2" style="font-weight: bold;">Code LLM</td>
                 </tr>
                 <tr>
                     <td>DeepSeek-Coder-V2</td>
@@ -207,16 +203,18 @@
 
 <div class="notes">
     <h2>Notes</h2>
-    <p>1. We design a framework for evaluating the license compliance capabilities of LLMs in code generation and
-        provide the first benchmark for evaluating this capability. In addition, we evaluate the license
-        compliance capabilities of 14 popular LLMs, providing insight into improving the LLM training process
-        and regulating LLM usage.</p>
-    <p>2. The data above comes from <a href="https://arxiv.org/pdf/2408.02487">the paper</a>.</p>
-    <p>3. Want to use this benchmark? Please visit <a href="https://github.com/osslab-pku/LiCoEval">GitHub
-        repository</a> for more!</p>
+    <ol>
+        <li>We design a framework for evaluating the license compliance capabilities of LLMs in code generation and
+            provide the first benchmark for evaluating this capability. In addition, we evaluate the license
+            compliance capabilities of 14 popular LLMs, providing insight into improving the LLM training process
+            and regulating LLM usage.</li>
+        <li>The data above comes from <a href="https://arxiv.org/pdf/2408.02487">the paper</a>.</li>
+        <li>Want to use this benchmark? Please visit <a href="https://github.com/osslab-pku/LiCoEval">GitHub
+            repository</a> for more!</li>
+    </ol>
 </div>
 
-<div class="leaderboard-table recommendation">
+<div class="recommendation">
     <h2>Recommendations</h2>
     <p>It is recommended to comprehensively understand LLM coding ability through a diverse set of benchmarks and
         leaderboards, such as:</p>
