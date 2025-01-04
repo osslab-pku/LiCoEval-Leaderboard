@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.5 // Trigger when top is in middle of viewport
+        threshold: 0.25 // Trigger when top is in lower 25% of viewport
     };
 
     function handleIntersection(entries, observer) {
