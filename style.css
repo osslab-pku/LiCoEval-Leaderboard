@@ -38,6 +38,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgba(207, 163, 169, 0.43);
 }
 
 .title-introduction {
@@ -66,6 +67,7 @@ body {
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
     font-size: 4em;
     letter-spacing: 0.06em;
+    color: rgba(219, 84, 255, 0.8);
 }
 
 .title-introduction p {
@@ -204,7 +206,7 @@ body {
 }
 
 .leaderboard-table th, .leaderboard-table td {
-    border: 0;
+    border: 1px solid #6b717a;
     padding: 15px;
     text-align: center;
     font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial,
@@ -220,14 +222,6 @@ body {
 
 .first-line {
     height: 100px;
-}
-
-.general {
-    background: linear-gradient(to right, #f7f5ff, white);
-}
-
-.code {
-    background: linear-gradient(to right, #f9f8f2, white);
 }
 
 .notes {

@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.25 // Trigger when top is in lower 25% of viewport
+        threshold: 0.5 // Trigger when top is in middle of viewport
     };
 
     function handleIntersection(entries, observer) {
@@ -79,9 +79,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         "GPT-3.5-Turbo", "GPT-4-Turbo", "GPT4o", "Gemini-1.5-Pro",
                         "Claude-3.5-Sonnet", "Qwen2-7B-Instruct", "GLM-4-9B-Chat", "Llama-3-8B-Instruct"
                     ].includes(label)) {
-                        return 'rgba(153, 102, 255, 0.8)';
+                        return 'rgba(155,97,170,0.8)';
                     } else {
-                        return 'rgba(255, 159, 64, 0.8)';
+                        return 'rgba(191,161,71,0.8)';
                     }
                 },
                 borderColor: (context) => {
@@ -90,9 +90,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         "GPT-3.5-Turbo", "GPT-4-Turbo", "GPT4o", "Gemini-1.5-Pro",
                         "Claude-3.5-Sonnet", "Qwen2-7B-Instruct", "GLM-4-9B-Chat", "Llama-3-8B-Instruct"
                     ].includes(label)) {
-                        return 'rgba(153, 102, 255, 1)';
+                        return 'rgba(155,97,170,0.8)';
                     } else {
-                        return 'rgba(255, 159, 64, 1)';
+                        return 'rgba(191,161,71,0.8)';
                     }
                 },
                 borderWidth: 1
@@ -131,8 +131,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     display: true,
                     labels: {
                         generateLabels: (chart) => [
-                            { text: 'General LLM', fillStyle: 'rgba(153, 102, 255, 0.8)' },
-                            { text: 'Code LLM', fillStyle: 'rgba(255, 159, 64, 0.8)' }
+                            { text: 'General LLM', fillStyle: 'rgba(155,97,170,0.8)' },
+                            { text: 'Code LLM', fillStyle: 'rgba(191,161,71,0.8)' }
                         ]
                     }
                 },
@@ -165,9 +165,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         "GPT-3.5-Turbo", "GPT-4-Turbo", "GPT4o", "Gemini-1.5-Pro",
                         "Claude-3.5-Sonnet", "Qwen2-7B-Instruct", "GLM-4-9B-Chat", "Llama-3-8B-Instruct"
                     ].includes(label)) {
-                        return 'rgba(153, 102, 255, 0.8)';
+                        return 'rgba(155, 97, 170, 0.8)';
                     } else {
-                        return 'rgba(255, 159, 64, 0.8)';
+                        return 'rgba(191,161,71,0.8)';
                     }
                 },
                 borderColor: (context) => {
@@ -176,9 +176,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         "GPT-3.5-Turbo", "GPT-4-Turbo", "GPT4o", "Gemini-1.5-Pro",
                         "Claude-3.5-Sonnet", "Qwen2-7B-Instruct", "GLM-4-9B-Chat", "Llama-3-8B-Instruct"
                     ].includes(label)) {
-                        return 'rgba(153, 102, 255, 1)';
+                        return 'rgba(155, 97, 170, 0.8)';
                     } else {
-                        return 'rgba(255, 159, 64, 1)';
+                        return 'rgba(191,161,71,0.8)';
                     }
                 },
                 borderWidth: 1
@@ -217,8 +217,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     display: true,
                     labels: {
                         generateLabels: (chart) => [
-                            { text: 'General LLM', fillStyle: 'rgba(153, 102, 255, 0.8)' },
-                            { text: 'Code LLM', fillStyle: 'rgba(255, 159, 64, 0.8)' }
+                            { text: 'General LLM', fillStyle: 'rgba(155, 97, 170, 0.8)' },
+                            { text: 'Code LLM', fillStyle: 'rgba(191,161,71,0.8)' }
                         ]
                     }
                 },
