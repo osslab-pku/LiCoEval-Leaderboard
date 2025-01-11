@@ -79,9 +79,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         "GPT-3.5-Turbo", "GPT-4-Turbo", "GPT4o", "Gemini-1.5-Pro",
                         "Claude-3.5-Sonnet", "Qwen2-7B-Instruct", "GLM-4-9B-Chat", "Llama-3-8B-Instruct"
                     ].includes(label)) {
-                        return 'rgba(155,97,170,0.8)';
+                        return 'rgba(102,232,255,0.8)';
                     } else {
-                        return 'rgba(191,161,71,0.8)';
+                        return 'rgb(121,227,136)';
                     }
                 },
                 borderColor: (context) => {
@@ -90,9 +90,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         "GPT-3.5-Turbo", "GPT-4-Turbo", "GPT4o", "Gemini-1.5-Pro",
                         "Claude-3.5-Sonnet", "Qwen2-7B-Instruct", "GLM-4-9B-Chat", "Llama-3-8B-Instruct"
                     ].includes(label)) {
-                        return 'rgba(155,97,170,0.8)';
+                        return 'rgba(102,232,255,0.8)';
                     } else {
-                        return 'rgba(191,161,71,0.8)';
+                        return 'rgb(121,227,136)';
                     }
                 },
                 borderWidth: 1
@@ -131,8 +131,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     display: true,
                     labels: {
                         generateLabels: (chart) => [
-                            { text: 'General LLM', fillStyle: 'rgba(155,97,170,0.8)' },
-                            { text: 'Code LLM', fillStyle: 'rgba(191,161,71,0.8)' }
+                            { text: 'General LLM', fillStyle: 'rgba(102,232,255,0.8)' },
+                            { text: 'Code LLM', fillStyle: 'rgb(121,227,136)' }
                         ]
                     }
                 },
@@ -165,9 +165,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         "GPT-3.5-Turbo", "GPT-4-Turbo", "GPT4o", "Gemini-1.5-Pro",
                         "Claude-3.5-Sonnet", "Qwen2-7B-Instruct", "GLM-4-9B-Chat", "Llama-3-8B-Instruct"
                     ].includes(label)) {
-                        return 'rgba(155, 97, 170, 0.8)';
+                        return 'rgba(102,232,255,0.8)';
                     } else {
-                        return 'rgba(191,161,71,0.8)';
+                        return 'rgb(121,227,136)';
                     }
                 },
                 borderColor: (context) => {
@@ -176,9 +176,9 @@ document.addEventListener('DOMContentLoaded', function() {
                         "GPT-3.5-Turbo", "GPT-4-Turbo", "GPT4o", "Gemini-1.5-Pro",
                         "Claude-3.5-Sonnet", "Qwen2-7B-Instruct", "GLM-4-9B-Chat", "Llama-3-8B-Instruct"
                     ].includes(label)) {
-                        return 'rgba(155, 97, 170, 0.8)';
+                        return 'rgba(102,232,255,0.8)';
                     } else {
-                        return 'rgba(191,161,71,0.8)';
+                        return 'rgb(121,227,136)';
                     }
                 },
                 borderWidth: 1
@@ -217,8 +217,8 @@ document.addEventListener('DOMContentLoaded', function() {
                     display: true,
                     labels: {
                         generateLabels: (chart) => [
-                            { text: 'General LLM', fillStyle: 'rgba(155, 97, 170, 0.8)' },
-                            { text: 'Code LLM', fillStyle: 'rgba(191,161,71,0.8)' }
+                            { text: 'General LLM', fillStyle: 'rgba(102,232,255,0.8)' },
+                            { text: 'Code LLM', fillStyle: 'rgb(121,227,136)' }
                         ]
                     }
                 },
